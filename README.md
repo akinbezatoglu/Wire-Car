@@ -14,7 +14,7 @@ __2-__ Tires rotate to the left when the __'A'__ key is pressed and to the right
 __3-__ The tires stop turning when the __'M'__ key is pressed. Turning the car forward, backward, left or right is left to the user. It can be moved forward by pressing the __'W'__ key, backward by pressing the __'S'__ key, left by pressing the __'A'__ key, and right by pressing the __'D'__ key.<br/>
 <img src="img/movement.gif" width="214" height="226">
 
-# Basic ideas that provide a leading role in the development of the code
+# Basic ideas that provide a leading role in the development of the wire car
 ### Drawing Cube
 void DrawCube(double* center, double heightlenRatio, double minorlenRatio, double majorlenRatio, double Ratio)
 <img src="img/fig-1.png" width="426" height="190">
