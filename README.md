@@ -50,3 +50,15 @@ y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br />
 
 <img src="img/fig-3-4.png" width="440" height="141"> <br />
 Thus, the position of the rear wheels will always be parallel to the cube. Since no CubeRotateAngel is used on the front wheels, a 45-degree angle is formed as shown in figure 3. For the front wheels to be parallel to the cube, the initial value of beta must be equal to 'CubeRotateAngel'. For example, let us say CubeRotateAngel is 30. Beta would then be -15 degrees. This allows the front wheels to move about 15 degrees to the left. Since an angle of 45 degrees with respect to the x-axis is formed initially, 30 degrees is obtained from '45 + (-15) 'and the front wheels are made parallel to the cube.
+
+
+# REFERENCES
+1.	https://learnopengl.com/Getting-started/Camera
+2.	http://slabode.exofire.net/circle_draw.shtml
+3.	https://stackoverflow.com/questions/4704986/switch-statement-using-or
+4.	https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml
+5.	https://www.opengl.org/resources/libraries/glut/spec3/node51.html
+6.	https://www.opengl.org/resources/libraries/glut/spec3/node50.html
+7.	https://www.opengl.org/resources/libraries/glut/spec3/node49.html
+8.	https://www.opengl.org/resources/libraries/glut/spec3/node46.html
+
