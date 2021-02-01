@@ -32,7 +32,7 @@ void SteeringWheel(double radius , double num_segments)
 <img src="img/fig-2.png" width="426" height="225">
 
 # When you examine the code, you will ask why
-### Why do I calculate "d" to find the vertex points of the cube in figure 1 ? Why don't I just add or subtract x' and y' to the center? [Fig-1](### Drawing Cube)
+### Why do I calculate "d" to find the vertex points of the cube in figure 1 ? Why don't I just add or subtract x' and y' to the center? ![Fig-1](### Drawing Cube)
 The wire car is intended to provide forward, backward, left, right turn and movement with keyboard controls. This is basically achieved by forming all the determined points connected to the center. Therefore, the distance of the point to the center is calculated.
 
 ### The understanding of why beta defined as 'CubeRotateAngle - 45'
