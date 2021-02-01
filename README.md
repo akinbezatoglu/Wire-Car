@@ -40,11 +40,11 @@ Let us visualize that the x obtained according to the definition of 'x= x * cos(
 The front wheels looked like ellipses when I added the same value to the x and y coordinates of the center of the tires. I managed to fix this error on the rear tires, but when I tried the front wheels, this time I prevented the wheels from turning.
 c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180); <br />
 <br />
-I tried this for the front wheels =>
+I tried this for the front wheels => <br />
 x = (c_b - s_b) * x + cx; <br />
 y = (c_b - s_b) * x + cy; <br/>
 <br />
-I tried this for the rear wheels =>
+I tried this for the rear wheels => <br />
 x = cos(CubeRotateAngle * PI / 180) * x + cx; <br />
 y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br />
 
