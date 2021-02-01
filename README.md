@@ -7,24 +7,24 @@ This code creates a wire car that the user can play with steering and wheel move
 
 __1-__ The initial situation when the project is started. The tires seem to go forward. Initially, the wire car cannot be moved.<br/>
 <img src="img/default.gif" width="214" height="226">
-
+<br />
 __2-__ Tires rotate to the left when the __'A'__ key is pressed and to the right when the __'D'__ key is pressed.<br/>
 <img src="img/left_right.gif" width="214" height="226">
-
+<br />
 __3-__ The tires stop turning when the __'M'__ key is pressed. Turning the car forward, backward, left or right is left to the user. It can be moved forward by pressing the __'W'__ key, backward by pressing the __'S'__ key, left by pressing the __'A'__ key, and right by pressing the __'D'__ key.<br/>
 <img src="img/movement.gif" width="214" height="226">
-
+<br />
 # Basic ideas that provide a leading role in the development of the wire car
 ### Drawing Cube
 void DrawCube(double* center, double heightlenRatio, double minorlenRatio, double majorlenRatio, double Ratio)
 <img src="img/fig-1.png" width="426" height="190">
-
-__Front-right point of Wire Car__ = ( Cx - cos(β) * d, Cy + sin(β) * d , Cz )
-__Back-right point of Wire Car__ = ( Cx + cos(β) * d, Cy + sin(β) * d , Cz )
-__Front-left point of Wire Car__ = ( Cx - cos(β) * d, Cy - sin(β) * d , Cz )
+<br />
+__Front-right point of Wire Car__ = ( Cx - cos(β) * d, Cy + sin(β) * d , Cz ) <br />
+__Back-right point of Wire Car__ = ( Cx + cos(β) * d, Cy + sin(β) * d , Cz ) <br />
+__Front-left point of Wire Car__ = ( Cx - cos(β) * d, Cy - sin(β) * d , Cz ) <br />
 __Back-left point of Wire Car__ = ( Cx + cos(β) * d, Cy - sin(β) * d , Cz ) <br />
 
-It is enough to raise these four points by h to get the cube.
+It is enough to raise these four points by h to get the cube. <br />
 
 ### Drawing Circle
 void Tires(double radius, double num_segments)
@@ -39,11 +39,14 @@ The wire car is intended to provide forward, backward, left, right turn and move
 Let us visualize that the x obtained according to the definition of 'x= x * cos(α) – y * sin(α) ' in Figure 2 is added to the x and y coordinates of the center.
 The front wheels looked like ellipses when I added the same value to the x and y coordinates of the center of the tires. I managed to fix this error on the rear tires, but when I tried the front wheels, this time I prevented the wheels from turning.
 c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180); <br />
-I tried this for the front wheels => x = (c_b - s_b) * x + cx; <br />
-                                     y = (c_b - s_b) * x + cy; <br/>
-I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; <br />
-                                     y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br />
-
+<br />
+I tried this for the front wheels =>
+x = (c_b - s_b) * x + cx; <br />
+y = (c_b - s_b) * x + cy; <br/>
+<br />
+I tried this for the rear wheels =>
+x = cos(CubeRotateAngle * PI / 180) * x + cx; <br />
+y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br />
+<br />
 <img src="img/fig-3-4.png" width="440" height="141">
-
 Thus, the position of the rear wheels will always be parallel to the cube. Since no CubeRotateAngel is used on the front wheels, a 45-degree angle is formed as shown in figure 3. For the front wheels to be parallel to the cube, the initial value of beta must be equal to 'CubeRotateAngel'. For example, let us say CubeRotateAngel is 30. Beta would then be -15 degrees. This allows the front wheels to move about 15 degrees to the left. Since an angle of 45 degrees with respect to the x-axis is formed initially, 30 degrees is obtained from '45 + (-15) 'and the front wheels are made parallel to the cube.
