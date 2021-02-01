@@ -38,29 +38,12 @@ The wire car is intended to provide forward, backward, left, right turn and move
 ### The understanding of why beta defined as 'CubeRotateAngle - 45'
 Let us visualize that the x obtained according to the definition of 'x= x * cos(α) – y * sin(α) ' in Figure 2 is added to the x and y coordinates of the center.
 The front wheels looked like ellipses when I added the same value to the x and y coordinates of the center of the tires. I managed to fix this error on the rear tires, but when I tried the front wheels, this time I prevented the wheels from turning.
-c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180);
-I tried this for the front wheels => x = (c_b - s_b) * x + cx; <br/>
+c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180); <br/>
+I tried this for the front wheels => x = (c_b - s_b) * x + cx; 
                                      y = (c_b - s_b) * x + cy; <br/>
-I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; <br/>
-				                             y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br/>
+I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; 
+                                     y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br/>
 
+<img src="img/fig-3-4.png" width="400" height="128">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Thus, the position of the rear wheels will always be parallel to the cube. Since no CubeRotateAngel is used on the front wheels, a 45-degree angle is formed as shown in figure 3. For the front wheels to be parallel to the cube, the initial value of beta must be equal to 'CubeRotateAngel'. For example, let us say CubeRotateAngel is 30. Beta would then be -15 degrees. This allows the front wheels to move about 15 degrees to the left. Since an angle of 45 degrees with respect to the x-axis is formed initially, 30 degrees is obtained from '45 + (-15) 'and the front wheels are made parallel to the cube.
