@@ -32,7 +32,7 @@ void SteeringWheel(double radius , double num_segments)
 <img src="img/fig-2.png" width="426" height="225">
 
 # When you examine the code, you will ask why
-### Why do I calculate "d" to find the vertex points of the cube in figure 1 ? Why don't I just add or subtract x' and y' to the center? ![Fig-1](### Drawing Cube)
+### Why do I calculate "d" to find the vertex points of the cube in figure 1 ? Why don't I just add or subtract x' and y' to the center?
 The wire car is intended to provide forward, backward, left, right turn and movement with keyboard controls. This is basically achieved by forming all the determined points connected to the center. Therefore, the distance of the point to the center is calculated.
 
 ### The understanding of why beta defined as 'CubeRotateAngle - 45'
@@ -44,6 +44,6 @@ I tried this for the front wheels => x = (c_b - s_b) * x + cx;
 I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; 
                                      y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br/>
 
-<img src="img/fig-3-4.png" width="400" height="128">
+<img src="img/fig-3-4.png" width="440" height="141">
 
 Thus, the position of the rear wheels will always be parallel to the cube. Since no CubeRotateAngel is used on the front wheels, a 45-degree angle is formed as shown in figure 3. For the front wheels to be parallel to the cube, the initial value of beta must be equal to 'CubeRotateAngel'. For example, let us say CubeRotateAngel is 30. Beta would then be -15 degrees. This allows the front wheels to move about 15 degrees to the left. Since an angle of 45 degrees with respect to the x-axis is formed initially, 30 degrees is obtained from '45 + (-15) 'and the front wheels are made parallel to the cube.
