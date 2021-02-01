@@ -22,7 +22,7 @@ void DrawCube(double* center, double heightlenRatio, double minorlenRatio, doubl
 __Front-right point of Wire Car__ = ( Cx - cos(β) * d, Cy + sin(β) * d , Cz )
 __Back-right point of Wire Car__ = ( Cx + cos(β) * d, Cy + sin(β) * d , Cz )
 __Front-left point of Wire Car__ = ( Cx - cos(β) * d, Cy - sin(β) * d , Cz )
-__Back-left point of Wire Car__ = ( Cx + cos(β) * d, Cy - sin(β) * d , Cz ) <br/>
+__Back-left point of Wire Car__ = ( Cx + cos(β) * d, Cy - sin(β) * d , Cz ) <br />
 
 It is enough to raise these four points by h to get the cube.
 
@@ -38,11 +38,11 @@ The wire car is intended to provide forward, backward, left, right turn and move
 ### The understanding of why beta defined as 'CubeRotateAngle - 45'
 Let us visualize that the x obtained according to the definition of 'x= x * cos(α) – y * sin(α) ' in Figure 2 is added to the x and y coordinates of the center.
 The front wheels looked like ellipses when I added the same value to the x and y coordinates of the center of the tires. I managed to fix this error on the rear tires, but when I tried the front wheels, this time I prevented the wheels from turning.
-c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180); <br/>
-I tried this for the front wheels => x = (c_b - s_b) * x + cx; <br/>
+c_b = cosf(beta *PI / 180; s_b = sinf(beta *PI / 180); <br />
+I tried this for the front wheels => x = (c_b - s_b) * x + cx; <br />
                                      y = (c_b - s_b) * x + cy; <br/>
-I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; <br/>
-                                     y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br/>
+I tried this for the rear wheels =>  x = cos(CubeRotateAngle * PI / 180) * x + cx; <br />
+                                     y =  sin(CubeRotateAngle * PI / 180) * x + cy; <br />
 
 <img src="img/fig-3-4.png" width="440" height="141">
 
